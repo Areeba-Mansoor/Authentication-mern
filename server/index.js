@@ -22,13 +22,10 @@ app.get('/ping', (req, res) => {
 app.use(bodyParser.json())
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 app.use('/auth' , AuthRouter)
 
-
-app.listen(PORT, () => {
-    console.log(`Server is running on ${PORT}`)
-})
+module.exports = app;
