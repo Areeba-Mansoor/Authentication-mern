@@ -22,7 +22,7 @@ app.get('/ping', (req, res) => {
 app.use(bodyParser.json())
 
 app.use(cors({
-  origin: "*",
+  origin: "https://authentication-mern-frontend.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
