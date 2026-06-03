@@ -8,7 +8,7 @@ export const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setLoggedInUser(localStorage.getItem("loggedInUser"));
+   setLoggedInUser(localStorage.getItem("loggedInUser") || "");
   }, []);
 
   const handleLogout = () => {
